@@ -1,0 +1,9 @@
+{
+  "name": "shopbasket",
+  "version": "1.0.0",
+  "description": "shopping website",
+  "main": "index.js",
+  "repository": "https://github.com/brsthegck/shopbasket",
+  "author": "brsthegck",
+  "license": "MIT"
+}

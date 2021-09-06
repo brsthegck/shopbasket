@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/Header.sass';
+//import './styles/Header.sass';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 
@@ -18,18 +18,48 @@ class Header extends React.Component{
         const testLinksArr = [
             {
                 key: 0,
-                label: 'Link1',
-                to: '/link1'
+                label: 'Süper Fiyatlar',
+                to: '/super-fiyatlar'
             },
             {
                 key: 1,
-                label: 'Link2',
-                to: '/link2'
+                label: 'Tüm Kampanyalar',
+                to: '/tum-kampanyalar'
             },
             {
                 key: 2,
-                label: 'Link3',
-                to: '/link3'
+                label: 'Yurt Dışı Alışveriş',
+                to: '/yurtdisi-alisveris'
+            },
+            {
+                key: 3,
+                label: 'Kazananlar Kulübü',
+                to: '/kazananlar-kulubu',
+            },
+            {
+                key: 4,
+                label: 'Satış Yap',
+                to: '/urun-satmak/kategori-secim'
+            },
+            {
+                key: 5,
+                label: 'Mağaza Aç',
+                to: '/Abonelik',
+            },
+            {
+                key: 6,
+                label: 'Bize Ulaşın',
+                to: '/yardim',
+            },
+            {
+                key: 7,
+                label: 'İade Süreci',
+                to: '/iade'
+            },
+            {
+                key: 8,
+                label: 'Sipariş Takibi',
+                to: '/siparis-takibi'
             }
         ];
 

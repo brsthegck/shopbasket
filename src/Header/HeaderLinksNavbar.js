@@ -28,12 +28,14 @@ export default function HeaderLinksNavbar(props){
     const classes = useStyles();
     
     return (
-        <ul className={classes.container}>
-            {props.linkArr.map(({key, label, to}) => (
-                <li key={key}>
-                    <Chip className={classes.chip} label={label} component={Link} to={to} size="small"/>
-                </li>
-            ))}
-        </ul>
+        <nav>
+            <ul className={classes.container}>
+                {props.linkArr.map(({key, label, to}) => (
+                    <li key={key}>
+                        <Chip className={classes.chip} label={label} component={Link} title={label} to={to} size="small"/>
+                    </li>
+                ))}
+            </ul>
+        </nav>
     );
 }

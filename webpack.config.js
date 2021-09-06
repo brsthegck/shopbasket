@@ -22,12 +22,16 @@ module.exports = {
                 use: 'babel-loader',
             },
             {
-                test: /\.s[ac]ss$/i,
-                use: ['style-loader', 'css-loader', 'sass-loader']
-            },
-            {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.svg$/,
+                use: 'svg-url-loader'
+            },
+            {
+                test: /\.(png|jpg|jpeg)$/,
+                use: 'url-loader'
             }
         ]
     },

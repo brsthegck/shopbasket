@@ -18,24 +18,30 @@ const useStyles = makeStyles({
         cursor: 'pointer'
     },
     container:{
+        listStyleType: 'none',
         display: 'flex',
-        listStyleType: 'none'
+        justifyContent: 'center',
+        padding: 0,
+        margin: '8px 0'
     }
 });
-
 
 export default function HeaderLinksNavbar(props){
     const classes = useStyles();
     
     return (
-        <nav>
-            <ul className={classes.container}>
-                {props.linkArr.map(({key, label, to}) => (
-                    <li key={key}>
-                        <Chip className={classes.chip} label={label} component={Link} title={label} to={to} size="small"/>
-                    </li>
-                ))}
-            </ul>
-        </nav>
+        <ul className={classes.container}>
+            {props.linkArr.map(({key, label, to}) => (
+                <li key={key}>
+                    <Chip 
+                        className={classes.chip} 
+                        label={label} 
+                        component={Link} 
+                        title={label} 
+                        to={to} 
+                        size="small"/>
+                </li>
+            ))}
+        </ul>
     );
 }

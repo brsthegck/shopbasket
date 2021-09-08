@@ -1,5 +1,4 @@
 import React from 'react';
-//import './styles/Header.sass';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 
@@ -7,6 +6,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import HeaderLinksNavbar from './HeaderLinksNavbar';
 import HeaderCategoryNavbar from './HeaderCategoryNavbar';
 import HeaderControls from './HeaderControls';
+import { Container, Box } from '@material-ui/core';
 
 //The whole header component
 class Header extends React.Component{
@@ -65,11 +65,13 @@ class Header extends React.Component{
 
         return (
         <div className="header-container">
-            <Router>
-                <HeaderLinksNavbar linkArr={testLinksArr}/>
-                <HeaderControls />
-                <HeaderCategoryNavbar />
-            </ Router>
+            <Container>
+                <Router>
+                    <HeaderLinksNavbar linkArr={testLinksArr}/>
+                    <HeaderControls />
+                    <HeaderCategoryNavbar />
+                </ Router>
+            </Container>
         </div>);   
     }
 }

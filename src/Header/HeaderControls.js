@@ -8,7 +8,7 @@ import HeaderButton from './HeaderButton';
 
 const useStyles = makeStyles({
     container: {
-        display: 'flex'
+        display: 'flex',
     }
 });
 

@@ -6,6 +6,7 @@ import { grey } from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
     chip: {
+        color: grey[700],
         background: 'transparent',
         transition: 'none',
         '&:hover': {

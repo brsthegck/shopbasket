@@ -39,6 +39,7 @@ export default function HeaderLinksNavbar(props){
                         label={label} 
                         component={Link} 
                         title={label} 
+                        alt={label}
                         to={to} 
                         size="small"/>
                 </li>

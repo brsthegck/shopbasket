@@ -50,6 +50,7 @@ function HeaderSearch(props){
             type="search"
             placeholder="Keşfetmeye başla"
             fullWidth
+            alt="Aradığınız ürün, kategori veya markayı yazınız"
             InputProps={{
                 startAdornment: (
                     <InputAdornment position="start">
@@ -66,6 +67,8 @@ function HeaderSearch(props){
             disableRipple
             disableFocusRipple
             type="submit"
+            alt="Ara"
+            title="Ara"
             >
             Ara
         </Button>

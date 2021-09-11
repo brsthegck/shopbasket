@@ -1,8 +1,8 @@
 import React from 'react';
+import Link from 'react-router-dom/Link';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import PersonIcon from '@material-ui/icons/Person';
-import { Badge } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core';
+import { Badge, makeStyles, MenuItem, ListItemText } from '@material-ui/core';
 import { grey } from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
@@ -37,4 +37,20 @@ function UserButtonAdornment(props){
     return (<PersonIcon className={classes.icon}/>)
 }
 
-export {ShoppingCartButtonAdornment, UserButtonAdornment}
+
+{/* TODO: Conditionally render logged in menu if logged in */}
+function UserButtonMenuItems(props){
+    const {handleClose} = props;
+
+    return (
+    <div>
+        <MenuItem component={Link} to='/uye-girisi' onClick={handleClose}>
+            <ListItemText primary="Giriş Yap"/>
+        </MenuItem>
+        <MenuItem component={Link} to='/kayit-ol' onClick={handleClose}>
+            <ListItemText primary="Ücretsiz Üye Ol"/>
+        </MenuItem>
+    </div>);
+};
+
+export {ShoppingCartButtonAdornment, UserButtonAdornment, UserButtonMenuItems}

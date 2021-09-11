@@ -5,7 +5,7 @@ import HeaderHamburgerMenu from './HeaderHamburgerMenu';
 import HeaderLogoLink from './HeaderLogoLink';
 import HeaderSearch from './HeaderSearch';
 import HeaderButton from './HeaderButton';
-import { ShoppingCartButtonAdornment, UserButtonAdornment } from './HeaderButtonAdornments';
+import { ShoppingCartButtonAdornment, UserButtonAdornment, UserButtonMenuItems} from './HeaderButtonAdornments';
 
 const useStyles = makeStyles({
     container: {
@@ -13,8 +13,6 @@ const useStyles = makeStyles({
         alignItems: 'center'
     }
 });
-
-
 
 function HeaderControls(props){ 
     const classes = useStyles();
@@ -25,15 +23,19 @@ function HeaderControls(props){
         <HeaderLogoLink />
         <HeaderSearch />
 
+        {/* TODO: Conditionally render username label if logged in, fix these warnings too*/}
         <HeaderButton 
         label="Giriş Yap"
         subLabel="veya üye ol"
-        adornmentComponent={<UserButtonAdornment/>}/>
+        menuItems={UserButtonMenuItems}>
+            <UserButtonAdornment/>
+        </HeaderButton>
         
         <HeaderButton
         label="Sepetim" 
-        adornmentComponent={<ShoppingCartButtonAdornment itemQty={31}/>}
-        />
+        to="/sepetim">
+            <ShoppingCartButtonAdornment itemQty={32}/>
+        </HeaderButton>
     </div>
     );  
 }

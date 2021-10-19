@@ -1,4 +1,3 @@
-//const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
@@ -23,12 +22,16 @@ module.exports = {
                 use: 'babel-loader',
             },
             {
-                test: /\.s[ac]ss$/i,
-                use: ['style-loader', 'css-loader', 'sass-loader']
-            },
-            {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.svg$/,
+                use: 'svg-url-loader'
+            },
+            {
+                test: /\.(png|jpg|jpeg)$/,
+                use: 'url-loader'
             }
         ]
     },
@@ -40,6 +43,9 @@ module.exports = {
         hot: true
     },
     plugins: [
-        new HtmlWebpackPlugin({template: htmlTemplatePath})
+        new HtmlWebpackPlugin({
+            template: htmlTemplatePath,
+            favicon: "./src/images/favicon.png"
+        })
     ]
 }
